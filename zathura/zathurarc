@@ -1,25 +1,21 @@
 # ui colors and font
-set default-fg "#9d9d9d"
-set default-bg "#272727"
-set statusbar-fg "#9d9d9d"
-set statusbar-bg "#272727"
-set font "sauce code pro nerd font 16"
+set default-fg "#d0d0d0"
+set default-bg "#222731"
+set statusbar-fg "#222731"
+set statusbar-bg "#d0d0d0"
+set font "Iosevka NFM"
 
 # dark theme
 set recolor true
-set recolor-lightcolor "#272727"
-set recolor-darkcolor "#9d9d9d"
+set recolor-lightcolor "#222731"
+set recolor-darkcolor "#d0d0d0"
 
 #increment j-k scroll
 set scroll-step 80
 
-# vim binds
-map l navigate next
-map h navigate previous
-map k scroll up
-map j scroll down
-map K scroll up  # todo: do it like 3k
-map J scroll down
+# # vim binds
+# map l navigate next
+# map h navigate previous
 
 # zoom
 map <C-+> zoom in
