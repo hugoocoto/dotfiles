@@ -1,4 +1,4 @@
-general.import = [ "~/.config/alacritty/themes/onedark.toml" ]
+general.import = [ "~/.config/alacritty/themes/shoebill.toml" ]
 
 [font]
 size = 18.0
@@ -26,9 +26,12 @@ bindings = [
 [window]
 opacity = 1.0
 
-
 [mouse]
 hide_when_typing = true
 
 [terminal]
 osc52 = "CopyPaste"
+
+[env]
+TERM = "xterm-256color"
+COLORTERM = "truecolor"

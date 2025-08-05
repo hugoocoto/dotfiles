@@ -1,0 +1,29 @@
+# Colors (Shoebill)
+
+# Default colors
+[colors.primary]
+background = '#222731'
+foreground = '#f0f0f0'
+
+# Normal colors
+[colors.normal]
+black   = '#424751'
+red     = '#ffa3b6'
+green   = '#d7ffbd'
+yellow  = '#ffffbd'
+blue    = '#accfff'
+magenta = '#d6d6ff'
+cyan    = '#dbeaff'
+white   = '#f0f0f0'
+
+# Bright colors
+[colors.bright]
+black   = '#aaaaaa'
+red     = '#ffa3b6'
+green   = '#d7ffbd'
+yellow  = '#ffffbd'
+blue    = '#accfff'
+magenta = '#d6d6ff'
+cyan    = '#dbeaff'
+white   = '#f0f0f0'
+
