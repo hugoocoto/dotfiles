@@ -12,7 +12,7 @@ Dotfiles from my Arch Linux - Laptop setup! Updated weekly.
 
 ## Shoebill
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/shbl-nvim-dark)
-- [Neovim](https://github.com/hugoocoto/nvim)
+- [Neovim](https://github.com/hugoocoto/shoebill)
 
 # Installation
 [Installation guide](./INSTALL.md)
