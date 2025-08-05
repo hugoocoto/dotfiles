@@ -205,6 +205,8 @@ print_status() {
 device_menu() {
     device=$1
 
+    pkill wofi
+
     # Get device name and mac address
     device_name=$(echo $device | cut -d ' ' -f 3-)
     mac=$(echo $device | cut -d ' ' -f 2)

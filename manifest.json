@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Shoebill",
-  "version": "0.1",
-  "description": "Shoebill nvim theme for firefox",
+  "name": "Shbl Hugo's theme",
+  "version": "1.1",
+  "description": "My own nvim theme for firefox",
 
   "theme": {
     "colors": {
