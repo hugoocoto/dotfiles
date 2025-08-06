@@ -4,7 +4,8 @@ Dotfiles from my Arch Linux - Laptop setup! Updated weekly.
 
 # [Hyprland]
 
-*Images should be pasted here*
+![](./images/2025-08-06_20:56:59.png)
+![](./images/2025-08-06_21:00:38.png)
 
 > Images can be outdated
 
