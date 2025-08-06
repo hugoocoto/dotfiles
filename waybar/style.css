@@ -3,11 +3,11 @@
     font-family: Iosevka NFP Medium;
     font-size: 16px;
     background-color: transparent;
-    color: #f0f0f0; /* default text color */
+    color: #bbc0b0; /* default text color */
 }
 
 window#waybar {
-    background-color: #424751;
+    background-color: #272e33;
     opacity: 1.0;
     /* border-top: 1px solid #000000; */
     /* transition-property: background-color; */
@@ -139,15 +139,15 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: #d7ffbd;
+    color: #a7c080;
 }
 
 #battery.warning:not(.charging) {
-    color: #ffffbd;
+    color: #dbbc7f;
 }
 
 #battery.critical:not(.charging) {
-    color: #ffa3b6;
+    color: #e67e80;
 }
 
 #power-profiles-daemon {
@@ -167,7 +167,7 @@ button:hover {
 /* } */
 
 label:focus {
-    background-color: #424751;
+    background-color: #272e33;
 }
 
 #cpu {

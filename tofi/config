@@ -1,20 +1,20 @@
 drun-launch = true
 auto-accept-single = true
 
-text-color = #f0f0f0
-prompt-color = #f0f0f0
-selection-color = #accfff
-background-color = #424751
-outline-color = #aaaaaa
+text-color = #bbc0b0
+prompt-color = #bbc0b0
+selection-color = #dbbc7f
+background-color = #272e33
+outline-color = #bbc0b0
 
-anchor = top
-width = 60%
-height = 30
-horizontal = true
+anchor = center
+width = 30%
+height = 30%
+horizontal = false
 font-size = 16
 prompt-text = "search: "
 font = Iosevka NFM
-outline-width = 1
+outline-width = 2
 min-input-width = 120
 result-spacing = 15
 padding-top = 0

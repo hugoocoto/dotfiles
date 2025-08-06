@@ -1,4 +1,4 @@
-general.import = [ "~/.config/alacritty/themes/shoebill.toml" ]
+general.import = [ "~/.config/alacritty/themes/forest.toml" ]
 
 [font]
 size = 18.0
@@ -38,4 +38,4 @@ COLORTERM = "truecolor"
 
 [terminal.shell] 
 program = "tmux"
-args = ["new-session", "-A", "D", "-s", "Home"]
+args = ["new-session", "-A", "-s", "Home"]
