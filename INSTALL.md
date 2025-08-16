@@ -17,8 +17,6 @@
 | Timezone |  | Madrid |
 | Additional packages |  | git |
 
-enable multilib
-
 Then press Install, yes, reboot system.
 
 4. Login with your user name and password.
