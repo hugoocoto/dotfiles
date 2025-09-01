@@ -11,9 +11,8 @@ Dotfiles from my Arch Linux - Laptop setup! Updated weekly.
 
 # Themes
 
-## Shoebill
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/shbl-nvim-dark)
-- [Neovim](https://github.com/hugoocoto/shoebill)
+- [Neovim](https://github.com/hugoocoto/hforest)
 
 # Installation
 [Installation guide](./INSTALL.md)

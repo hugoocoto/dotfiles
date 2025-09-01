@@ -5,6 +5,7 @@ DIRS=(
     "$HOME/code"
     "$HOME/dotfiles"
     "$HOME/.config"
+    "$HOME/Downloads"
 )
 
 if [[ $# -eq 1 ]]; then
