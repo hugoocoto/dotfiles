@@ -31,11 +31,7 @@
 #network,
 #bluetooth,
 #window,
+#clock,
 #tray {
     padding-right: 1em;
-}
-
-#clock {
-  padding-right: 1em;
-  padding-left: 1em;
 }

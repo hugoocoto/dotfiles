@@ -25,7 +25,19 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %H:%M}"
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "iso8601" : true,
+                    "on-scroll"     : 1,
+                    "format": {
+                              "days":       "<span color='#d4be98'><b>{}</b></span>",
+                              "weekdays":   "<span color='#7daea3'><b>{}</b></span>",
+                              "today":      "<span color='#e78a4e'><b><u>{}</u></b></span>"
+                              }
+                    },
+    },
     },
 
     "wireplumber": {
