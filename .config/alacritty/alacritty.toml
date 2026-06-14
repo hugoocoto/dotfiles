@@ -1,0 +1,69 @@
+[colors.primary]
+background = '#1d2021'
+foreground = '#d4be98'
+
+# Normal colors
+[colors.normal]
+black   = '#928374'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#e78a4e'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#ddc7a1'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#ea6962'
+green   = '#a9b665'
+yellow  = '#e78a4e'
+blue    = '#7daea3'
+magenta = '#d3869b'
+cyan    = '#89b482'
+white   = '#ddc7a1'
+
+
+[font]
+size = 20.0
+
+[font.bold]
+family = "Iosevka NFM"
+style = "bold"
+
+[font.bold_italic]
+family = "Iosevka NFM"
+style = "Bold Italic"
+
+[font.italic]
+family = "Iosevka NFM"
+style = "Italic"
+
+[font.normal]
+family = "Iosevka NFM"
+style = "Regular"
+
+[keyboard]
+bindings = [
+    {key = "Return", mods = "Control|Shift", action = "SpawnNewInstance"},
+    {key = "j", mods = "Control|Shift", action = "ScrollLineDown"},
+    {key = "k", mods = "Control|Shift", action = "ScrollLineUp"}
+    ]
+
+[window]
+opacity = 1
+
+[mouse]
+hide_when_typing = true
+
+[terminal]
+osc52 = "CopyPaste"
+
+[env]
+TERM = "xterm-256color"
+COLORTERM = "truecolor"
+
+[terminal.shell] 
+program = "tmux"
+args = ["new-session", "-A", "-s", "Home"]

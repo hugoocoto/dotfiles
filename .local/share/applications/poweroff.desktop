@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Poweroff
+Exec=poweroff
+Icon=utilities-terminal
+Type=Application
+
