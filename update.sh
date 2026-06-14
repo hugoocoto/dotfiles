@@ -9,7 +9,7 @@
 ROOT="$HOME/"
 DOTS="$HOME/dotfiles/"
 
-FILES="$(find . -type f ! -wholename ".gitignore" ! -wholename "$0" ! -wholename "*/.git/*" )"
+FILES="$(find . -type f ! -wholename ".gitignore" ! -wholename "$0" ! -wholename "*/.git/*" ! -wholename "*.md")"
 
 for f in $FILES; do
 

@@ -1,0 +1,75 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 24,
+    "spacing": 5,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["wireplumber", "battery", "hyprland/language", "idle_inhibitor", "network", "bluetooth", "clock"],
+
+"hyprland/workspaces": {
+    "format": "{name} {windows}",
+    "workspace-taskbar": {
+        "enable": true,
+        "update-active-window": false,
+        "format": "{icon}",
+    },
+    "persistent-workspaces": {
+        "*": 5,
+    },
+},
+
+    "hyprland/window": {
+        "format": "[{}]"
+    },
+
+    "clock": {
+        "format": "{:%d.%m.%Y | %H:%M}"
+    },
+
+    "wireplumber": {
+        "format": "\udb81\udd7e {volume}%",
+        "max-volume": 100,
+        "scroll-step": 5
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "interval": 15,
+        "format": "{icon} {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+    },
+
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        }
+    }
+}
