@@ -6,18 +6,18 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [],
-    "modules-right": ["wireplumber", "battery", "hyprland/language", "idle_inhibitor", "network", "bluetooth", "clock"],
+    "modules-right": ["wireplumber", "battery", "hyprland/language", "network", "bluetooth", "clock"],
 
 "hyprland/workspaces": {
     "format": "{name} {windows}",
     "workspace-taskbar": {
         "enable": true,
         "update-active-window": false,
-        "format": "{icon}",
+        "format": "{icon}"
     },
     "persistent-workspaces": {
-        "*": 5,
-    },
+        "*": [1,2,3,4,5]
+    }
 },
 
     "hyprland/window": {
@@ -32,16 +32,16 @@
                     "iso8601" : true,
                     "on-scroll"     : 1,
                     "format": {
-                              "days":       "<span color='#d4be98'><b>{}</b></span>",
-                              "weekdays":   "<span color='#7daea3'><b>{}</b></span>",
-                              "today":      "<span color='#e78a4e'><b><u>{}</u></b></span>"
+                              "days":     "<span color='#d4be98'><b>{}</b></span>",
+                              "weekdays": "<span color='#7daea3'><b>{}</b></span>",
+                              "today":    "<span color='#e78a4e'><b><u>{}</u></b></span>"
                               }
                     },
     },
-    },
 
     "wireplumber": {
-        "format": "\udb81\udd7e {volume}%",
+        "format": "volume: {volume}%",
+        "format-muted": "muted",
         "max-volume": 100,
         "scroll-step": 5
     },
@@ -49,28 +49,18 @@
     "battery": {
         "bat": "BAT1",
         "interval": 15,
-        "format": "{icon} {capacity}%",
-        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "format": "battery: {capacity}%",
     },
 
     "network": {
-        "format": "",
-        "format-ethernet": "\udb83\udc9d",
-        "format-wifi": "{icon}",
-        "format-disconnected": "\udb83\udc9c",
-        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname}",
-        "tooltip-format-disconnected": "Disconnected",
+        "format": "network: {essid}",
+        "format-disconnected": "offline"
     },
 
     "bluetooth": {
         "format": "\udb80\udcaf",
         "format-disabled": "\udb80\udcb2",
         "format-connected": "\udb80\udcb1",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     },
 
     "hyprland/language": {
@@ -84,4 +74,4 @@
             "deactivated": "\udb83\udfaa"
         }
     }
-}
+},

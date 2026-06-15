@@ -125,22 +125,11 @@ vim.pack.add({
     "https://github.com/nvim-mini/mini.extra",
     "https://github.com/wakatime/vim-wakatime",
 
-    "https://github.com/cocopon/iceberg.vim",
-    "https://github.com/hugoocoto/hforest",
-    "https://github.com/morhetz/gruvbox",
-    "https://github.com/nanotech/jellybeans.vim",
-    "https://github.com/rebelot/kanagawa.nvim",
-    "https://github.com/rose-pine/neovim",
-    "https://github.com/sainnhe/everforest",
     "https://github.com/sainnhe/gruvbox-material",
-    "https://github.com/vague-theme/vague.nvim",
-
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("^1"),
     },
-    "https://github.com/sar/friendly-snippets.nvim",
-    "https://github.com/L3MON4D3/LuaSnip",
     -- "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
@@ -162,20 +151,8 @@ require 'mini.extra'.setup()
 require 'mini.pick'.setup()
 require 'oil'.setup()
 
--- blink.cmp + LuaSnip setup
-local luasnip = require 'luasnip'
-luasnip.config.setup {}
-luasnip.filetype_extend('jsp', { 'html' })
-require('luasnip.loaders.from_vscode').lazy_load()
-
 require('blink.cmp').setup {
-    snippets = { preset = 'luasnip' },
-    keymap = {
-        preset = 'none',
-        ['<Tab>'] = { 'show', 'select_next', 'snippet_forward', 'fallback' },
-        ['<S-Tab>'] = { 'select_prev', 'snippet_backward', 'fallback' },
-        ['<CR>'] = { 'accept', 'fallback' },
-    },
+    keymap = { preset = 'enter' },
     completion = {
         trigger = {
             show_on_keyword = false,
@@ -183,7 +160,7 @@ require('blink.cmp').setup {
         },
     },
     sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'buffer' },
     },
 }
 
@@ -214,7 +191,7 @@ vim.api.nvim_create_autocmd('BufReadPost', {
     end,
 })
 
--- Do not open pdf with nvim
+-- Don't open pdf with nvim
 vim.api.nvim_create_autocmd("BufReadCmd", {
     pattern = "*.pdf",
     callback = function(ev)
@@ -266,5 +243,6 @@ vim.lsp.enable({
     'bashls',
     'html',
     'jdtls',
+    'zls',
     'rust_analyzer',
 })

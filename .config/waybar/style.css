@@ -1,6 +1,6 @@
 @define-color foreground #d4be98;
 @define-color background #1d2021;
-@define-color blue #7daea3;
+@define-color gray #928374;
 
 * {
     font-family: Iosevka NFP;
@@ -16,12 +16,12 @@
 }
 
 #workspaces button {
-    color: @foreground;
+    color: @gray;
     padding-left: 0.5em;
 }
 
 #workspaces button.active {
-    color: @blue;
+    color: @foreground;
 }
 
 #wireplumber,
