@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [],
-    "modules-right": ["wireplumber", "battery", "hyprland/language", "network", "bluetooth", "clock"],
+    "modules-right": ["wireplumber", "battery", "hyprland/language", "network", "clock"],
 
 "hyprland/workspaces": {
     "format": "{name} {windows}",

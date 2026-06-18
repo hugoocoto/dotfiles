@@ -30,7 +30,8 @@ hl.monitor({
 ---------------------
 
 local terminal = "alacritty"
-local menu     = "pkill tofi || tofi-drun"
+-- local menu     = "pkill tofi || tofi-drun"
+local menu     = "/home/hugo/code/zrun/zig-out/bin/zrun"
 local browser  = "helium 'about:blank'"
 
 
@@ -58,7 +59,17 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -----------------------
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
+hl.config({
+    ecosystem = {
+        enforce_permissions = true
+    }
+})
 
+hl.permission({
+    binary = "/usr/lib/xdg-desktop-portal-hyprland",
+    type = "screencopy",
+    mode = "allow"
+})
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -258,7 +269,9 @@ hl.bind("ALT + j", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("ALT + k", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 hl.bind("ALT + h", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 
-hl.bind("Print", hl.dsp.exec_cmd('if area=$(slurp); then grim -g "$area" - | tee >(wl-copy) > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png && notify-send "Screenshot saved" -t 1000; fi'))
+hl.bind("Print",
+    hl.dsp.exec_cmd(
+        'if area=$(slurp); then grim -g "$area" - | tee >(wl-copy) > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png && notify-send "Screenshot saved" -t 1000; fi'))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----

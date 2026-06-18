@@ -38,7 +38,7 @@ export MANPAGER="nvim +Man!"
 export MANROFFOPT="-P -c"
 export PATH="$PATH:$HOME/.local/bin"
 
-PS1='\033[30;1m\w\033[0m '
+PS1='\[\033[30;1m\]\w\[\033[0m\] '
 
 function command_not_found_handle() {
     echo -e "\e[31m$1??\e[0m"
