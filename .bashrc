@@ -31,12 +31,14 @@ alias cd..='cd ..'
 alias ga='git add .'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
+alias za='zathura --fork'
 
 export EDITOR='nvim'
 export LESS='-R --use-color -Dd+r -Du+b'
 export MANPAGER="nvim +Man!"
 export MANROFFOPT="-P -c"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/code/hemp/bin"
 
 PS1='\[\033[30;1m\]\w\[\033[0m\] '
 

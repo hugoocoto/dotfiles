@@ -31,7 +31,7 @@ hl.monitor({
 
 local terminal = "alacritty"
 -- local menu     = "pkill tofi || tofi-drun"
-local menu     = "/home/hugo/code/zrun/zig-out/bin/zrun"
+local menu     = "zrun"
 local browser  = "helium 'about:blank'"
 
 
