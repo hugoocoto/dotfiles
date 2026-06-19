@@ -39,6 +39,7 @@ export MANPAGER="nvim +Man!"
 export MANROFFOPT="-P -c"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/code/hemp/bin"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 PS1='\[\033[30;1m\]\w\[\033[0m\] '
 

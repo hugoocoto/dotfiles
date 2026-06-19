@@ -152,7 +152,11 @@ require 'mini.pick'.setup()
 require 'oil'.setup()
 
 require('blink.cmp').setup {
-    keymap = { preset = 'enter' },
+    keymap = {
+        preset = 'enter',
+        ['<Tab>'] = { 'show', 'select_next', 'fallback' },
+        ['<S-Tab>'] = { 'select_prev', 'fallback' },
+    },
     completion = {
         trigger = {
             show_on_keyword = false,
