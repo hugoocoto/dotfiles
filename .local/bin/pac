@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Browse all packages and install them on Enter
+
+sudo bash -c "pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse --bind 'enter:execute(pacman -S {})'"

@@ -31,8 +31,8 @@ hl.monitor({
 
 local terminal = "alacritty"
 -- local menu     = "pkill tofi || tofi-drun"
-local menu     = "zrun"
-local browser  = "helium 'about:blank'"
+local menu     = "/home/hugo/.local/bin/zrun"
+local browser  = "/home/hugo/.local/bin/helium 'about:blank'"
 
 
 -------------------
@@ -59,10 +59,12 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -----------------------
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
-hl.config({
-    ecosystem = {
-        enforce_permissions = true
-    }
+hl.config({ ecosystem = { enforce_permissions = true } })
+
+hl.permission({
+    binary = "/usr/bin/grim",
+    type = "screencopy",
+    mode = "allow",
 })
 
 hl.permission({

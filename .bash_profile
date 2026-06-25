@@ -9,5 +9,5 @@ ln -sf /tmp/Downloads -t $HOME
 
 
 if [[ "$PWD" == "$HOME" ]]; then
-    todo -week -quiet
+    /home/hugo/code/hemp/bin/todo -week -quiet
 fi

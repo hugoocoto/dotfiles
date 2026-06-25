@@ -45,11 +45,7 @@ family = "Iosevka NFM"
 style = "Regular"
 
 [keyboard]
-bindings = [
-    {key = "Return", mods = "Control|Shift", action = "SpawnNewInstance"},
-    {key = "j", mods = "Control|Shift", action = "ScrollLineDown"},
-    {key = "k", mods = "Control|Shift", action = "ScrollLineUp"}
-    ]
+bindings = []
 
 [window]
 opacity = 1
