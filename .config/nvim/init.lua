@@ -78,7 +78,7 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-N>]])
 -- Write a typst image func for the last screen capture
 vim.keymap.set('n', '<leader>ls', function()
     -- configuration:
-    local source_dir = os.getenv("HOME") .. "/ScreenCaptures"
+    local source_dir = os.getenv("HOME") .. "/Pictures/Screenshots/"
     local dest_dir = "images"
 
     local handle = io.popen("ls -t " .. source_dir .. " | head -n 1")
@@ -94,8 +94,7 @@ end)
 
 -- bold and italic for typst
 vim.keymap.set('x', '<C-b>', [[c**<esc>P]])
-vim.keymap.set('x', '<C-_>', [[c__<esc>P]])
-vim.keymap.set('n', '<leader>m', ":wall<cr>:make<cr>")
+vim.keymap.set('x', '<C-i>', [[c__<esc>P]])
 
 -- pickers
 vim.keymap.set('n', '<Leader>f/', '<Cmd>Pick history scope="/"<CR>', { desc = '"/" history' })
@@ -118,13 +117,11 @@ vim.keymap.set('n', '<Leader>fr', '<Cmd>Pick resume<CR>', { desc = 'Resume' })
 
 vim.pack.add({
     "https://github.com/neovim/nvim-lspconfig",
-    "https://github.com/chomosuke/typst-preview.nvim",
-
     "https://github.com/stevearc/oil.nvim",
     "https://github.com/nvim-mini/mini.pick",
     "https://github.com/nvim-mini/mini.extra",
     "https://github.com/wakatime/vim-wakatime",
-
+    "https://github.com/chomosuke/typst-preview.nvim",
     "https://github.com/sainnhe/gruvbox-material",
     {
         src = "https://github.com/saghen/blink.cmp",
@@ -136,13 +133,6 @@ vim.pack.add({
 -------------------------------------------------------------------------------
 -- Plugin setup
 -------------------------------------------------------------------------------
-
--- vim.api.nvim_create_autocmd('LspAttach', {
---     callback = function(ev)
---         vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
---     end,
--- })
-
 require 'typst-preview'.setup {
     dependencies_bin = { ['tinymst'] = 'tinymst' }
 }
@@ -183,6 +173,7 @@ require('vim._core.ui2').enable() -- enable ui2 messages
 
 vim.g.gruvbox_material_background = 'hard'
 vim.g.gruvbox_material_disable_italic_comment = 1
+vim.g.gruvbox_material_transparent_background = 2
 vim.cmd.colorscheme("gruvbox-material")
 
 -- Return to last position when opening a file

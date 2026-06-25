@@ -48,7 +48,7 @@ style = "Regular"
 bindings = []
 
 [window]
-opacity = 1
+opacity = 0.92
 
 [mouse]
 hide_when_typing = true

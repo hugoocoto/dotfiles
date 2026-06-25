@@ -1,3 +1,4 @@
-fs.map
+.fs.map
 README.md
 update.sh
+.dotignore

@@ -9,7 +9,7 @@
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$HOME"
 DOTS="$HERE"
-MAP="$DOTS/fs.map"
+MAP="$DOTS/.fs.map"
 set -euo pipefail
 
 FILES="$(git -C "$HERE" ls-files -z | tr '\0' '\n')"
