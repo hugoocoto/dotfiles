@@ -123,6 +123,9 @@ vim.pack.add({
     "https://github.com/wakatime/vim-wakatime",
     "https://github.com/chomosuke/typst-preview.nvim",
     "https://github.com/sainnhe/gruvbox-material",
+
+    "https://github.com/hugoocoto/nvim-lu",
+
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("^1"),
@@ -171,10 +174,12 @@ require('blink.cmp').setup {
 -------------------------------------------------------------------------------
 require('vim._core.ui2').enable() -- enable ui2 messages
 
-vim.g.gruvbox_material_background = 'hard'
-vim.g.gruvbox_material_disable_italic_comment = 1
-vim.g.gruvbox_material_transparent_background = 2
-vim.cmd.colorscheme("gruvbox-material")
+-- vim.g.gruvbox_material_background = 'hard'
+-- vim.g.gruvbox_material_disable_italic_comment = 1
+-- vim.g.gruvbox_material_transparent_background = 2
+-- vim.cmd.colorscheme("gruvbox-material")
+
+vim.cmd.colorscheme("gogh")
 
 -- Return to last position when opening a file
 vim.api.nvim_create_autocmd('BufReadPost', {

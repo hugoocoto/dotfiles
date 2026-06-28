@@ -38,6 +38,7 @@ export LESS='-R --use-color -Dd+r -Du+b'
 export MANPAGER="nvim +Man!"
 export MANROFFOPT="-P -c"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/code/hemp/bin"
 export XDG_DATA_HOME="$HOME/.local/share"
 

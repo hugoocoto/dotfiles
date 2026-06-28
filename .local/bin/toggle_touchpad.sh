@@ -1,12 +1,12 @@
 #!/bin/bash
 
-file="/sys/bus/pci/devices/0000:01:00.0/power/control"
-content="$(<"$file")"
+touchpad="/sys/bus/i2c/devices/i2c-MSNB0001:00/0018:06CB:CEBD.0001/input/input14/inhibited"
+state="$(<"$touchpad")"
 
-if [[ "$content" == "on" ]]; then
-    sudo bash -c "echo 'auto' > $file"
+if [[ "$state" == "0" ]]; then
+    echo "1" | sudo tee "$touchpad" > /dev/null
+    echo "Touchpad disabled"
 else
-    sudo bash -c "echo 'on' > $file"
+    echo "0" | sudo tee "$touchpad" > /dev/null
+    echo "Touchpad enabled"
 fi
-
-cat "$file"

@@ -10,12 +10,3 @@
 /home/hugo/dotfiles/.config/tofi/config|/home/hugo/.config/tofi/config
 /home/hugo/dotfiles/.config/waybar/config.jsonc|/home/hugo/.config/waybar/config.jsonc
 /home/hugo/dotfiles/.config/waybar/style.css|/home/hugo/.config/waybar/style.css
-/home/hugo/dotfiles/.dotignore|/home/hugo/.dotignore
-/home/hugo/dotfiles/.gitconfig|/home/hugo/.gitconfig
-/home/hugo/dotfiles/.gitignore|/home/hugo/.gitignore
-/home/hugo/dotfiles/.local/bin/pac|/home/hugo/.local/bin/pac
-/home/hugo/dotfiles/.local/bin/toggle_touchpad.sh|/home/hugo/.local/bin/toggle_touchpad.sh
-/home/hugo/dotfiles/.local/bin/usbcam.sh|/home/hugo/.local/bin/usbcam.sh
-/home/hugo/dotfiles/.local/share/applications/poweroff.desktop|/home/hugo/.local/share/applications/poweroff.desktop
-/home/hugo/dotfiles/.local/share/applications/sleep.desktop|/home/hugo/.local/share/applications/sleep.desktop
-/home/hugo/dotfiles/.local/share/applications/toggle-touchpad.desktop|/home/hugo/.local/share/applications/toggle-touchpad.desktop

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Toggle touchpad
-Exec=bash -c "$HOME/scripts/toggle_touchpad.sh"
+Exec=/home/hugo/.local/bin/toggle_touchpad.sh
 Icon=utilities-terminal
 Type=Application
 
