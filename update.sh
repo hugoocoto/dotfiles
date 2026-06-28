@@ -6,11 +6,12 @@
 #
 # by Hugo Coto
 
+set -euo pipefail
+
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$HOME"
 DOTS="$HERE"
 MAP="$DOTS/.fs.map"
-set -euo pipefail
 
 FILES="$(git -C "$HERE" ls-files -z | tr '\0' '\n')"
 if [ -f "$HERE/.dotignore" ]; then
@@ -53,7 +54,7 @@ while IFS= read -r f; do
 done <<< "$FILES"
 
 if (( count == 0 )); then 
-    echo "Everything is up to date"
+    echo "Everything is up-to-date"
 else
     echo "$count link(s) created"
 fi
