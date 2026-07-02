@@ -126,6 +126,8 @@ vim.pack.add({
 
     "https://github.com/hugoocoto/nvim-lu",
 
+    -- llvm highlight groups and tags
+    "https://github.com/rhysd/vim-llvm",
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("^1"),

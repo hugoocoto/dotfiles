@@ -31,7 +31,8 @@ hl.monitor({
 
 local terminal = "alacritty"
 -- local menu     = "pkill tofi || tofi-drun"
-local menu     = "/home/hugo/.local/bin/zrun"
+-- local menu     = "/home/hugo/.local/bin/zrun" -- raylib version
+local menu     = "/home/hugo/code/eqnx/zrun_eqnx/zrun.sh" -- eqnx version
 local browser  = "/home/hugo/.local/bin/helium 'about:blank'"
 
 
