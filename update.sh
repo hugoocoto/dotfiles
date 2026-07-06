@@ -48,7 +48,7 @@ while IFS= read -r f; do
     elif [ -e "$Rf" ]; then echo "ERR - dest exists [$Rf]"
     else
         ln -s "$Df" "$Rf" && echo "NEW - link created [$Df -> $Rf]"
-        (( count++ ))
+        count="$(( $count + 1 ))"
     fi
     echo "$Df|$Rf" >> "$MAP"
 done <<< "$FILES"
