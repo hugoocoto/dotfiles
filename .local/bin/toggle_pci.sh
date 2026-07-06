@@ -9,4 +9,4 @@ else
     sudo bash -c "echo 'on' > $file"
 fi
 
-cat "Power: $file"
+cat "$file"
