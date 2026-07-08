@@ -7,12 +7,12 @@ package.path = package.path .. ";" .. os.getenv("HOME") .. "/.config/pm/?.lua"
 
 -- Build path
 Build = {
-    path = os.getenv("HOME") .. "/.local/share/pm/cache/"
+    path = os.getenv("HOME") .. "/.local/share/pm/cache"
 }
 
 -- Bin path
 Bin = {
-    path = os.getenv("HOME") .. "/.local/share/pm/bin/"
+    path = os.getenv("HOME") .. "/.local/share/pm/bin"
 }
 
 --[[
@@ -32,7 +32,9 @@ Packages = {
         build = "tar -xzf pm.tar.gz && make",
         artifact = "pm",
     },
-    -- require 'nvim',
+
+    require 'nvim',
 
     Github_make("hugoocoto", "fetch", "main", "fetch"),
+    Github_make("hugoocoto", "dv", "main", "dv"),
 }

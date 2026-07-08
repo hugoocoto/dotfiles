@@ -111,6 +111,14 @@ vim.keymap.set('n', '<Leader>fg', '<Cmd>Pick grep_live<CR>', { desc = 'Grep live
 vim.keymap.set('n', '<Leader>fh', '<Cmd>Pick help<CR>', { desc = 'Help tags' })
 vim.keymap.set('n', '<Leader>fr', '<Cmd>Pick resume<CR>', { desc = 'Resume' })
 
+vim.keymap.set({ 'n' }, '<Tab>', function()
+    if vim.snippet.active({ direction = 1 }) then
+        return '<Cmd>lua vim.snippet.jump(1)<CR>'
+    else
+        return '<Tab>'
+    end
+end, { expr = true, silent = true })
+
 -------------------------------------------------------------------------------
 -- Plugins
 -------------------------------------------------------------------------------
