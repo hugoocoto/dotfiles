@@ -49,6 +49,7 @@
     "battery": {
         "bat": "BAT1",
         "interval": 15,
+        "warning-low": 20,
         "format": "battery: {capacity}%",
     },
 

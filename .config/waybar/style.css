@@ -1,6 +1,7 @@
 @define-color foreground #d4be98;
 @define-color background #141617;
 @define-color gray #928374;
+@define-color red #ea6962;
 
 * {
     font-family: Iosevka NFP;
@@ -22,6 +23,11 @@
 
 #workspaces button.active {
     color: @foreground;
+}
+
+#battery.warning,
+#battery.critical {
+  color: @red;
 }
 
 #wireplumber,

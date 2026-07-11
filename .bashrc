@@ -24,7 +24,7 @@ bind '"\C-p": history-search-backward'
 bind '"\C-n": history-search-forward'
 
 alias ls='ls --color=auto'
-alias la='ls -lA --color=auto -h'
+alias la='ls -lhA --color=auto'
 alias grep='grep --color=auto'
 alias cd..='cd ..'
 alias ga='git add .'
@@ -35,10 +35,11 @@ export EDITOR='nvim'
 export LESS='-R --use-color -Dd+r -Du+b'
 export MANPAGER="nvim +Man!"
 export MANROFFOPT="-P -c"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
-export PATH="$PATH:$HOME/code/hemp/bin"
-export XDG_DATA_HOME="$HOME/.local/share"
+export PATH="$PATH:$HOME/.local/share/pm/bin" # https://github.com/hugoocoto/pm
 
 PS1='\[\033[30;1m\]\w\[\033[0m\] '
 
