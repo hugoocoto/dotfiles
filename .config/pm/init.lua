@@ -5,15 +5,13 @@
 -- Add ~/.config/pm/ to the path
 package.path = package.path .. ";" .. os.getenv("HOME") .. "/.config/pm/?.lua"
 
--- Build path
-Build = {
-    path = os.getenv("HOME") .. "/.local/share/pm/cache/"
+-- System configuration
+System = {
+    build = { path = os.getenv("HOME") .. "/.local/share/pm/cache/" }, -- Build path
+    bin = { path = os.getenv("HOME") .. "/.local/share/pm/bin/" },     -- Bin path
 }
 
--- Bin path
-Bin = {
-    path = os.getenv("HOME") .. "/.local/share/pm/bin/"
-}
+require('github')
 
 --[[
     Package possible fields:
@@ -31,4 +29,9 @@ Packages = {
         artifact = "pm",
     },
     require 'nvim',
+
+    Github { user = "hugoocoto", repo = "dv" },
+    Github { user = "hugoocoto", repo = "todo" },
+    Github { user = "hugoocoto", repo = "vicel" },
+    Github { user = "hugoocoto", repo = "fetch" },
 }
