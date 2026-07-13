@@ -24,14 +24,14 @@ require('github')
 Packages = {
     {
         -- pm bootstraping. Keep pm updated.
-        url = "https://github.com/hugoocoto/pm/releases/download/nightly/pm.tar.gz",
-        build = "tar -xzf pm.tar.gz && make",
-        artifact = "pm",
+        url = "https://github.com/hugoocoto/pm/releases/download/nightly/pm-x86_64.AppImage",
+        build = "chmod +x pm",
+        name = "pm",
     },
     require 'nvim',
 
     Github { user = "hugoocoto", repo = "dv" },
     Github { user = "hugoocoto", repo = "todo" },
-    Github { user = "hugoocoto", repo = "vicel" },
+    Github { user = "hugoocoto", repo = "vicel", cmd = "make release" },
     Github { user = "hugoocoto", repo = "fetch" },
 }

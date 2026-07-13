@@ -23,6 +23,7 @@ PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 bind '"\C-p": history-search-backward'
 bind '"\C-n": history-search-forward'
 
+alias pm='pm --color'
 alias ls='ls --color=auto'
 alias la='ls -lhA --color=auto'
 alias grep='grep --color=auto'

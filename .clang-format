@@ -79,7 +79,7 @@ AlignAfterOpenBracket: Align
 # int aaaa = 12;
 # int b    = 23;
 # int ccc  = 23;
-AlignConsecutiveAssignments: false # true
+AlignConsecutiveAssignments: true # false 
 
 # AlignConsecutiveDeclarations (bool)
 # if true, align variable names in multiple declarations.
