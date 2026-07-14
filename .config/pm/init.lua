@@ -28,10 +28,18 @@ Packages = {
         build = "chmod +x pm",
         name = "pm",
     },
+
     require 'nvim',
+    require 'helium',
 
     Github { user = "hugoocoto", repo = "dv" },
     Github { user = "hugoocoto", repo = "todo" },
     Github { user = "hugoocoto", repo = "vicel", cmd = "make release" },
     Github { user = "hugoocoto", repo = "fetch" },
+    Github { user = "hugoocoto", repo = "eqnx" },
+    Github { user = "hugoocoto", repo = "yaci" },
+    Github { user = "hugoocoto", repo = "zrun", cmd="zig build", artifact="zig-out/bin/zrun" },
+    Github { user = "hugoocoto", repo = "pdfjoin", cmd = "chmod +x pdfjoin" },
+    Github { user = "hugoocoto", repo = "b" , cmd="make b && make desktop-entry"},
+    Github { user = "hugoocoto", repo = "tetris" },
 }

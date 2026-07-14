@@ -31,9 +31,9 @@ hl.monitor({
 
 local terminal = "alacritty"
 -- local menu     = "pkill tofi || tofi-drun"
--- local menu     = "/home/hugo/.local/bin/zrun" -- raylib version
-local menu     = "/home/hugo/code/eqnx/zrun_eqnx/zrun.sh" -- eqnx version
-local browser  = "/home/hugo/.local/bin/helium 'about:blank'"
+local menu     = "zrun" -- raylib version
+-- local menu     = "/home/hugo/code/eqnx/zrun_eqnx/zrun.sh" -- eqnx version
+local browser  = "xdg-open 'about:blank'"
 
 
 -------------------
@@ -182,8 +182,8 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper  = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo    = true, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
 
     },
 })
