@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "bottom",
-    "height": 24,
+    "height": 26,
     "spacing": 5,
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
@@ -49,7 +49,10 @@
     "battery": {
         "bat": "BAT1",
         "interval": 15,
-        "warning-low": 20,
+        "states": {
+            "warning": 25,
+            "critical": 15
+        },
         "format": "battery: {capacity}%",
     },
 

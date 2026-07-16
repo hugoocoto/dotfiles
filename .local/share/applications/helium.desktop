@@ -2,7 +2,7 @@
 Version=1.0
 Name=Helium
 
-Exec="sh -c 'helium' " %U
+Exec=sh -c "helium %U"
 StartupNotify=true
 Terminal=false
 Icon=helium
