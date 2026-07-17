@@ -42,4 +42,5 @@ Packages = {
     Github { user = "hugoocoto", repo = "pdfjoin", cmd = "chmod +x pdfjoin" },
     Github { user = "hugoocoto", repo = "b" , cmd="make b && make desktop-entry"},
     Github { user = "hugoocoto", repo = "tetris" },
+    Github { user = "hugoocoto", repo = "st" },
 }

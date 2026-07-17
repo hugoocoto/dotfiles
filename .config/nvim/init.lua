@@ -72,7 +72,7 @@ vim.keymap.set('n', '<bs>', function()
     vim.diagnostic.config({ virtual_lines = not vim.diagnostic.config().virtual_lines })
 end)
 
-vim.keymap.set('n', '<leader>e', ":Oil<cr>")
+vim.keymap.set('n', '<leader>e', ':Oil .<cr>')
 vim.keymap.set('t', '<Esc>', [[<C-\><C-N>]])
 
 -- Write a typst image func for the last screen capture
@@ -199,6 +199,24 @@ vim.api.nvim_create_autocmd('BufReadPost', {
             vim.api.nvim_win_set_cursor(0, mark)
         end
     end,
+})
+
+-- Rename terminal buffers for cleaner :ls output
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    pcall(vim.api.nvim_buf_set_name, 0, "term: " .. vim.fn.getcwd())
+  end,
+})
+
+vim.api.nvim_create_autocmd("DirChanged", {
+  pattern = "global",
+  callback = function()
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      if vim.bo[buf].buftype == "terminal" then
+        pcall(vim.api.nvim_buf_set_name, buf, "term: " .. vim.fn.getcwd())
+      end
+    end
+  end,
 })
 
 -- Don't open pdf with nvim

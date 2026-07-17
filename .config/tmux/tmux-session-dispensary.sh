@@ -26,3 +26,7 @@ if ! tmux has-session -t "$selected_name"; then
 fi
 
 tmux switch-client -t "$selected_name"
+
+NVIM_S=$(tmux show-environment -g NVIM 2>/dev/null | sed 's/^NVIM=//')
+[ -n "$NVIM_S" ] && [ -n "$selected" ] \
+    && command nvim --server "$NVIM_S" --remote-expr 'execute("cd " . fnameescape("'"$selected"'"))'
