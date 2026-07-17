@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=zrun
+
+Exec=zrun
+NoDisplay=true
+Terminal=false
+Icon=/home/hugo/Pictures/zrun_icon.png
+Type=Application
