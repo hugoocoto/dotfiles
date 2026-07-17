@@ -61,20 +61,3 @@ function gc(){
         git commit -e
     fi
 }
-
-# function nvim() {
-#     if [ -n "$NVIM" ]; then
-#         command nvim --server "$NVIM" --remote-tab "$@"
-#     else
-#         command nvim "$@"
-#     fi
-# }
-
-# function cd() {
-#     builtin cd "$@" || return
-#     if [ -n "$NVIM" ]; then
-#         command nvim --server "$NVIM" --remote-expr 'execute("cd " . fnameescape("'"$PWD"'"))' > /dev/null 2>&1
-#     fi
-# }
-
-# [ -n "$TMUX" ] && [ -n "$NVIM" ] && tmux setenv -g NVIM "$NVIM"
