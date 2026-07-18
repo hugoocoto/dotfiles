@@ -11,7 +11,8 @@ System = {
     bin = { path = os.getenv("HOME") .. "/.local/share/pm/bin/" },     -- Bin path
 }
 
-require('github')
+Fetch = require 'ur'
+Github = require 'github'
 
 --[[
     Package possible fields:
@@ -29,8 +30,8 @@ Packages = {
         name = "pm",
     },
 
-    require 'nvim',
-    require 'helium',
+    Fetch { user = "hugoocoto", file = "nvim.lua" },
+    Fetch { user = "hugoocoto", file = "helium.lua" },
 
     Github { user = "hugoocoto", repo = "dv" },
     Github { user = "hugoocoto", repo = "todo" },
@@ -38,9 +39,9 @@ Packages = {
     Github { user = "hugoocoto", repo = "fetch" },
     Github { user = "hugoocoto", repo = "eqnx" },
     Github { user = "hugoocoto", repo = "yaci" },
-    Github { user = "hugoocoto", repo = "zrun", cmd="zig build", artifact="zig-out/bin/zrun" },
+    Github { user = "hugoocoto", repo = "zrun", cmd = "zig build", artifact = "zig-out/bin/zrun" },
     Github { user = "hugoocoto", repo = "pdfjoin", cmd = "chmod +x pdfjoin" },
-    Github { user = "hugoocoto", repo = "b" , cmd="make b && make desktop-entry"},
+    Github { user = "hugoocoto", repo = "b", cmd = "make b && make desktop-entry" },
     Github { user = "hugoocoto", repo = "tetris" },
     Github { user = "hugoocoto", repo = "st" },
 }
