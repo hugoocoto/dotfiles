@@ -37,3 +37,5 @@ function Github(opts)
         artifact          = opts.artifact or repo,
     }
 end
+
+return Github
