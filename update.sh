@@ -17,7 +17,7 @@ FILES="$(git -C "$HERE" ls-files -z | tr '\0' '\n')"
 if [ -f "$HERE/.dotignore" ]; then
     while IFS= read -r pattern || [ -n "$pattern" ]; do
         [[ "$pattern" =~ ^#|^$ ]] && continue
-        FILES="$(grep -vF "$pattern" <<< "$FILES")"
+        FILES="$(grep -vxF "$pattern" <<< "$FILES")"
     done < "$HERE/.dotignore"
 fi
 
@@ -26,8 +26,8 @@ if [ -f "$MAP" ]; then
         grep -qxF "${f1#"$DOTS/"}" <<< "$FILES" && continue
         if   [ -L "$f2" ]; then
             echo "DEL - Removing link [$f2]"
-            rm "$f2"
-            rmdir -p "$(dirname "$f2")" 2>/dev/null
+            rm "$f2" || continue
+            rmdir -p "$(dirname "$f2")" 2>/dev/null || continue
         elif [ -f "$f2" ]; then echo "ERR - dest exists and it's a file [$f2]"
         elif [ -d "$f2" ]; then echo "ERR - dest exists and it's a directory [$f2]"
         elif [ -e "$f2" ]; then echo "ERR - dest exists and it's not a link [$f2]"
