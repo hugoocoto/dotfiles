@@ -29,24 +29,20 @@ Packages = {
         name = "pm",
     },
 
-    {
-        url = "https://github.com/hugoocoto/wallpapers/releases/download/latest/wallpaper",
-        build = "chmod +x wallpaper",
-        name = "wallpaper",
-    },
-
     ur.Fetch { user = "hugoocoto", file = "nvim-nightly/nvim.lua" },
     ur.Fetch { user = "hugoocoto", file = "helium/helium.lua" },
 
-    ur.Github { user = "hugoocoto", repo = "dv" },
-    ur.Github { user = "hugoocoto", repo = "todo" },
-    ur.Github { user = "hugoocoto", repo = "vicel", cmd = "make release" },
-    ur.Github { user = "hugoocoto", repo = "fetch" },
-    ur.Github { user = "hugoocoto", repo = "eqnx" },
-    ur.Github { user = "hugoocoto", repo = "yaci" },
-    ur.Github { user = "hugoocoto", repo = "zrun", cmd = "zig build", artifact = "zig-out/bin/zrun" },
-    ur.Github { user = "hugoocoto", repo = "pdfjoin", cmd = "chmod +x pdfjoin" },
-    ur.Github { user = "hugoocoto", repo = "b", cmd = "make b && make desktop-entry" },
-    ur.Github { user = "hugoocoto", repo = "tetris" },
-    ur.Github { user = "hugoocoto", repo = "st" },
+    -- My tools
+    ur.Fetch { user = "hugoocoto", file = "wallpaper/wallpaper.lua" },
+    ur.Fetch { user = "hugoocoto", file = "dv/dv.lua" },
+    ur.Fetch { user = "hugoocoto", file = "todo/todo.lua" },
+    ur.Fetch { user = "hugoocoto", file = "vicel/vicel.lua" },
+    ur.Fetch { user = "hugoocoto", file = "fetch/fetch.lua" },
+    ur.Fetch { user = "hugoocoto", file = "eqnx/eqnx.lua" },
+    ur.Fetch { user = "hugoocoto", file = "yaci/yaci.lua" },
+    ur.Fetch { user = "hugoocoto", file = "zrun/zrun.lua" },
+    ur.Fetch { user = "hugoocoto", file = "pdfjoin/pdfjoin.lua" },
+    ur.Fetch { user = "hugoocoto", file = "b/b.lua" },
+    ur.Fetch { user = "hugoocoto", file = "tetris/tetris.lua" },
+    ur.Fetch { user = "hugoocoto", file = "st/st.lua" },
 }
