@@ -5,5 +5,5 @@ Name=zrun
 Exec=zrun
 NoDisplay=true
 Terminal=false
-Icon=/home/hugo/Pictures/zrun_icon.png
+Icon=/home/hugo/.local/share/icons/zrun_icon.png
 Type=Application
