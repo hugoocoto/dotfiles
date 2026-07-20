@@ -30,6 +30,12 @@ Packages = {
         name = "pm",
     },
 
+    {
+        url = "https://github.com/hugoocoto/wallpapers/releases/download/latest/wallpaper",
+        build = "chmod +x wallpaper",
+        name = "wallpaper",
+    },
+
     Fetch { user = "hugoocoto", file = "nvim.lua" },
     Fetch { user = "hugoocoto", file = "helium.lua" },
 
