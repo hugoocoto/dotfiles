@@ -11,8 +11,7 @@ System = {
     bin = { path = os.getenv("HOME") .. "/.local/share/pm/bin/" },     -- Bin path
 }
 
-Fetch = require 'ur'
-Github = require 'github'
+local ur = require 'ur'
 
 --[[
     Package possible fields:
@@ -36,18 +35,18 @@ Packages = {
         name = "wallpaper",
     },
 
-    Fetch { user = "hugoocoto", file = "nvim.lua" },
-    Fetch { user = "hugoocoto", file = "helium.lua" },
+    ur.Fetch { user = "hugoocoto", file = "nvim-nightly/nvim.lua" },
+    ur.Fetch { user = "hugoocoto", file = "helium/helium.lua" },
 
-    Github { user = "hugoocoto", repo = "dv" },
-    Github { user = "hugoocoto", repo = "todo" },
-    Github { user = "hugoocoto", repo = "vicel", cmd = "make release" },
-    Github { user = "hugoocoto", repo = "fetch" },
-    Github { user = "hugoocoto", repo = "eqnx" },
-    Github { user = "hugoocoto", repo = "yaci" },
-    Github { user = "hugoocoto", repo = "zrun", cmd = "zig build", artifact = "zig-out/bin/zrun" },
-    Github { user = "hugoocoto", repo = "pdfjoin", cmd = "chmod +x pdfjoin" },
-    Github { user = "hugoocoto", repo = "b", cmd = "make b && make desktop-entry" },
-    Github { user = "hugoocoto", repo = "tetris" },
-    Github { user = "hugoocoto", repo = "st" },
+    ur.Github { user = "hugoocoto", repo = "dv" },
+    ur.Github { user = "hugoocoto", repo = "todo" },
+    ur.Github { user = "hugoocoto", repo = "vicel", cmd = "make release" },
+    ur.Github { user = "hugoocoto", repo = "fetch" },
+    ur.Github { user = "hugoocoto", repo = "eqnx" },
+    ur.Github { user = "hugoocoto", repo = "yaci" },
+    ur.Github { user = "hugoocoto", repo = "zrun", cmd = "zig build", artifact = "zig-out/bin/zrun" },
+    ur.Github { user = "hugoocoto", repo = "pdfjoin", cmd = "chmod +x pdfjoin" },
+    ur.Github { user = "hugoocoto", repo = "b", cmd = "make b && make desktop-entry" },
+    ur.Github { user = "hugoocoto", repo = "tetris" },
+    ur.Github { user = "hugoocoto", repo = "st" },
 }
