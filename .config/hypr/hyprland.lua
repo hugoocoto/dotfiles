@@ -34,7 +34,7 @@ local terminal = "st -e tmux new-session -A -s Home"
 -- local menu     = "pkill tofi || tofi-drun"
 local menu     = "zrun" 
 local browser  = "xdg-open 'about:blank'" -- kinda cool hack
-
+local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
 
 -------------------
 ---- AUTOSTART ----
@@ -43,6 +43,7 @@ local browser  = "xdg-open 'about:blank'" -- kinda cool hack
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar & hyprpaper")
+    hl.exec_cmd(set_background)
 end)
 
 
@@ -222,6 +223,7 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(set_background))
 
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
