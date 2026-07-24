@@ -29,11 +29,12 @@ hl.monitor({
 ---- MY PROGRAMS ----
 ---------------------
 
-local terminal = "/home/hugo/code/st/st -e nvim --listen \"$XDG_RUNTIME_DIR/nvim.sock\" -c 'terminal tmux new-session -A -s Home' +startinsert"
-local terminal = "st -e tmux new-session -A -s Home"
+local terminal       =
+"/home/hugo/code/st/st -e nvim --listen \"$XDG_RUNTIME_DIR/nvim.sock\" -c 'terminal tmux new-session -A -s Home' +startinsert"
+local terminal       = "st -e tmux new-session -A -s Home"
 -- local menu     = "pkill tofi || tofi-drun"
-local menu     = "zrun" 
-local browser  = "xdg-open 'about:blank'" -- kinda cool hack
+local menu           = "zrun"
+local browser        = "xdg-open 'about:blank'" -- kinda cool hack
 local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
 
 -------------------
@@ -203,13 +204,19 @@ hl.config({
         kb_rules     = "",
 
         follow_mouse = 1,
-
         sensitivity  = 0, -- -1.0 - 1.0, 0 means no modification.
 
-        touchpad     = {
-            natural_scroll = true,
-        },
+        touchpad     = { natural_scroll = true, },
     },
+})
+
+-- trackball toggle scroll on wheel middle click
+hl.device({
+    name = "nulea-bt5.0",
+    scroll_method = "on_button_down",
+    scroll_button_lock = true,
+    scroll_factor = 1,
+    scroll_button = 274,
 })
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })

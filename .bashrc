@@ -31,6 +31,7 @@ alias cd..='cd ..'
 alias ga='git add .'
 alias gp='git push'
 alias za='zathura --fork'
+alias opencode='EXPERIMENTAL=true opencode'
 
 export EDITOR='nvim'
 export LESS='-R --use-color -Dd+r -Du+b'
