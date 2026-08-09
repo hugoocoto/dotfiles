@@ -229,7 +229,7 @@ vim.api.nvim_create_autocmd("BufReadCmd", {
 })
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-    pattern = { "*.c", "*.h" },
+    pattern = { "*.c", "*.h", "*.cpp", "*.hpp" },
     callback = function()
         vim.opt_local.tabstop = 8
         vim.opt_local.shiftwidth = 8
