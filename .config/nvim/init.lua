@@ -22,9 +22,7 @@ vim.o.hlsearch = false                        -- don't persist search highlight
 vim.o.incsearch = true                        -- incremental search
 vim.o.ignorecase = true                       -- case-insensitive search
 vim.o.smartcase = true                        -- smart case when uppercase used
-vim.o.updatetime = 1000                       -- slower idle update events
 vim.o.conceallevel = 0                        -- show concealed text plainly
-vim.o.lazyredraw = true                       -- skip some intermediate redraws
 
 vim.o.colorcolumn = "+0"                      -- highlight at textwidth
 vim.o.textwidth = 80                          -- preferred line width
@@ -34,18 +32,17 @@ vim.o.swapfile = false                        -- disable swap files
 vim.o.backup = false                          -- disable backup files
 vim.o.undofile = true                         -- persistent undo
 
--- vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir" -- undo file directory
+vim.o.clipboard = "unnamedplus"               -- use system clipboard
+vim.o.ruler = false                           -- hide ruler
+vim.o.showcmd = false                         -- hide partial command display
+vim.o.showmode = false                        -- hide default mode text
+vim.opt.spelllang = { "en", "es" }            -- spellcheck languages
+
+vim.o.wrap = true                             -- wrap
+vim.o.linebreak = true                        -- "inteligent" wrap
+
 vim.opt.path:append({ "/usr/lib/gcc/**/include", "**" })
 
-vim.o.clipboard = "unnamedplus"    -- use system clipboard
-vim.o.ruler = false                -- hide ruler
-vim.o.showcmd = false              -- hide partial command display
-vim.o.showmode = false             -- hide default mode text
-vim.opt.spelllang = { "en", "es" } -- spellcheck languages
-
--- temporal
-vim.o.wrap = true      -- wrap
-vim.o.linebreak = true -- "inteligent" wrap
 
 -------------------------------------------------------------------------------
 -- Diagnostics
@@ -96,7 +93,6 @@ end)
 vim.keymap.set('x', '<C-b>', [[c**<esc>P]])
 vim.keymap.set('x', '<C-i>', [[c__<esc>P]])
 
--- pickers
 vim.keymap.set('n', '<Leader>f/', '<Cmd>Pick history scope="/"<CR>', { desc = '"/" history' })
 vim.keymap.set('n', '<Leader>f:', '<Cmd>Pick history scope=":"<CR>', { desc = '":" history' })
 vim.keymap.set('n', '<Leader>fC', '<Cmd>Pick git_commits path="%"<CR>', { desc = 'Commits (buf)' })
@@ -123,24 +119,32 @@ end, { expr = true, silent = true })
 -- Plugins
 -------------------------------------------------------------------------------
 
+-- Rebuild treesitter parsers whenever vim.pack updates the plugin itself
+vim.api.nvim_create_autocmd('PackChanged', {
+    callback = function(ev)
+        if ev.data.spec.name == 'nvim-treesitter' and ev.data.kind == 'update' then
+            vim.cmd('TSUpdate')
+        end
+    end,
+})
+
 vim.pack.add({
-    "https://github.com/neovim/nvim-lspconfig",
-    "https://github.com/stevearc/oil.nvim",
-    "https://github.com/nvim-mini/mini.pick",
-    "https://github.com/nvim-mini/mini.extra",
-    "https://github.com/wakatime/vim-wakatime",
     "https://github.com/chomosuke/typst-preview.nvim",
+    "https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/nvim-mini/mini.extra",
+    "https://github.com/nvim-mini/mini.pick",
+    "https://github.com/nvim-treesitter/nvim-treesitter",
     "https://github.com/sainnhe/gruvbox-material",
+    "https://github.com/stevearc/oil.nvim",
+    "https://github.com/wakatime/vim-wakatime",
 
     "https://github.com/hugoocoto/nvim-lu",
-
-    -- llvm highlight groups and tags
     "https://github.com/rhysd/vim-llvm",
+    "https://github.com/hugoocoto/nvim-gogh",
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("^1"),
     },
-    -- "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
 -------------------------------------------------------------------------------
@@ -171,13 +175,25 @@ require('blink.cmp').setup {
     },
 }
 
--- require 'nvim-treesitter'.setup()
+require 'nvim-treesitter'.setup()
 
--- vim.api.nvim_create_autocmd('FileType', {
---     callback = function()
---         pcall(vim.treesitter.start)
---     end,
--- })
+-- Install the parser for a filetype on demand, then start highlighting
+vim.api.nvim_create_autocmd('FileType', {
+    callback = function(ev)
+        local ft = vim.bo[ev.buf].filetype
+        local lang = vim.treesitter.language.get_lang(ft) or ft
+
+        if not vim.treesitter.language.add(lang) then
+            if vim.tbl_contains(require('nvim-treesitter').get_available(), lang) then
+                require('nvim-treesitter').install(lang):wait(300000)
+            else
+                return
+            end
+        end
+
+        pcall(vim.treesitter.start)
+    end,
+})
 
 -------------------------------------------------------------------------------
 -- Misc stuff
@@ -203,20 +219,20 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 
 -- Rename terminal buffers for cleaner :ls output
 vim.api.nvim_create_autocmd("TermOpen", {
-  callback = function()
-    pcall(vim.api.nvim_buf_set_name, 0, "term: " .. vim.fn.getcwd())
-  end,
+    callback = function()
+        pcall(vim.api.nvim_buf_set_name, 0, "term: " .. vim.fn.getcwd())
+    end,
 })
 
 vim.api.nvim_create_autocmd("DirChanged", {
-  pattern = "global",
-  callback = function()
-    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-      if vim.bo[buf].buftype == "terminal" then
-        pcall(vim.api.nvim_buf_set_name, buf, "term: " .. vim.fn.getcwd())
-      end
-    end
-  end,
+    pattern = "global",
+    callback = function()
+        for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+            if vim.bo[buf].buftype == "terminal" then
+                pcall(vim.api.nvim_buf_set_name, buf, "term: " .. vim.fn.getcwd())
+            end
+        end
+    end,
 })
 
 -- Don't open pdf with nvim

@@ -1,5 +1,7 @@
 My dotfiles. There is no room for fancy things when performance matters.
 
-AUR-less Arch Setup.
+AUR-less Arch Setup. Nvim + other software to make nvim work.
 
-It uses [zrun](https://github.com/hugoocoto/zrun) rewritten in [eqnx](https://github.com/hugoocoto/eqnx) btw.
+I daily-run [zrun](https://github.com/hugoocoto/zrun) and
+[pm](https://github.com/hugoocoto/pm) btw.
+
