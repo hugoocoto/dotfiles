@@ -16,7 +16,6 @@ vim.o.expandtab = true                        -- tabs -> spaces
 vim.o.smartindent = true                      -- auto-indent new lines
 vim.o.relativenumber = true                   -- relative line numbers
 vim.o.number = true                           -- absolute current line number
-vim.o.wrap = false                            -- disable line wrapping
 vim.o.scrolloff = 4                           -- keep context around cursor
 vim.o.hlsearch = false                        -- don't persist search highlight
 vim.o.incsearch = true                        -- incremental search
@@ -62,8 +61,7 @@ vim.keymap.set("n", "<leader><leader>", vim.lsp.buf.format)
 vim.keymap.set("v", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
-vim.keymap.set("c", "wq", "x")
-vim.keymap.set("x", "<leader>e", "y:echo <C-r>\"<cr>gv")
+vim.keymap.set("x", "<leader>e", "y:echo <C-r>\"<cr>gv") -- evaluate expression on the fly
 vim.keymap.set("n", "<leader>c", "1z=")
 vim.keymap.set('n', '<bs>', function()
     vim.diagnostic.config({ virtual_lines = not vim.diagnostic.config().virtual_lines })
@@ -137,6 +135,7 @@ vim.pack.add({
     "https://github.com/sainnhe/gruvbox-material",
     "https://github.com/stevearc/oil.nvim",
     "https://github.com/wakatime/vim-wakatime",
+    "https://github.com/tommcdo/vim-lion",
 
     "https://github.com/hugoocoto/nvim-lu",
     "https://github.com/rhysd/vim-llvm",
@@ -200,7 +199,7 @@ vim.api.nvim_create_autocmd('FileType', {
 -------------------------------------------------------------------------------
 require('vim._core.ui2').enable() -- enable ui2 messages
 
--- vim.g.gruvbox_material_background = 'hard'
+-- vim.g.gruvbox_material_background             = 'hard'
 -- vim.g.gruvbox_material_disable_italic_comment = 1
 -- vim.g.gruvbox_material_transparent_background = 2
 -- vim.cmd.colorscheme("gruvbox-material")
