@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f "$1" ]; then
+    echo "File $1 not found" && exit 1
+fi
+
+typst watch "$1" -o "watch.pdf" & | nohup
+zathura --fork "watch.pdf"
