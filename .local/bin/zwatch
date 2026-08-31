@@ -1,8 +1,27 @@
 #!/bin/bash
 
+# Usage: zwatch <file.typ>
+#
+# Watches a Typst file for changes, recompiling it to watch.pdf in the current
+# directory, and opens it in zathura (which auto-reloads on change). Returns
+# immediately; once zathura is closed, the watcher is killed and watch.pdf is
+# removed in the background.
+
 if [ ! -f "$1" ]; then
     echo "File $1 not found" && exit 1
 fi
 
-typst watch "$1" -o "watch.pdf" & | nohup
-zathura --fork "watch.pdf"
+typst watch "$1" "watch.pdf" >/dev/null 2>&1 &
+watch_pid=$!
+disown "$watch_pid"
+
+until [ -f "watch.pdf" ]; do
+    sleep 0.1
+done
+
+(
+    zathura "watch.pdf"
+    kill "$watch_pid" 2>/dev/null
+    rm -f "watch.pdf"
+) &
+disown
