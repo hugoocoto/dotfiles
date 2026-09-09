@@ -262,6 +262,20 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
     end,
 })
 
+-- multicursor color
+vim.api.nvim_create_autocmd("UIEnter",
+    {
+        callback = function()
+            vim.api.nvim_ui_send("\027[>40;2:0:0:255q")
+        end,
+    })
+vim.api.nvim_create_autocmd({ "VimLeave" },
+    {
+        callback = function()
+            vim.api.nvim_ui_send("\027[>40;0q")
+        end,
+    })
+
 -------------------------------------------------------------------------------
 -- LSP
 -------------------------------------------------------------------------------

@@ -32,6 +32,7 @@ hl.monitor({
 local terminal       =
 "/home/hugo/code/st/st -e nvim --listen \"$XDG_RUNTIME_DIR/nvim.sock\" -c 'terminal tmux new-session -A -s Home' +startinsert"
 local terminal       = "st -e tmux new-session -A -s Home"
+local terminal       = "kitty"
 -- local menu     = "pkill tofi || tofi-drun"
 local menu           = "zrun"
 local browser        = "xdg-open 'about:blank'" -- kinda cool hack
