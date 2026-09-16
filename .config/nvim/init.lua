@@ -204,7 +204,8 @@ require('vim._core.ui2').enable() -- enable ui2 messages
 -- vim.g.gruvbox_material_transparent_background = 2
 -- vim.cmd.colorscheme("gruvbox-material")
 
-vim.cmd.colorscheme("gogh")
+-- vim.cmd.colorscheme("gogh") -- old nvim-gogh plugin
+vim.cmd.colorscheme("gogh") -- gogh from local base16 repo (~/code/base16)
 
 -- Return to last position when opening a file
 vim.api.nvim_create_autocmd('BufReadPost', {
@@ -263,18 +264,18 @@ vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
 })
 
 -- multicursor color
-vim.api.nvim_create_autocmd("UIEnter",
-    {
-        callback = function()
-            vim.api.nvim_ui_send("\027[>40;2:0:0:255q")
-        end,
-    })
-vim.api.nvim_create_autocmd({ "VimLeave" },
-    {
-        callback = function()
-            vim.api.nvim_ui_send("\027[>40;0q")
-        end,
-    })
+-- vim.api.nvim_create_autocmd("UIEnter",
+--     {
+--         callback = function()
+--             vim.api.nvim_ui_send("\027[>40;2:0:0:255q")
+--         end,
+--     })
+-- vim.api.nvim_create_autocmd({ "VimLeave" },
+--     {
+--         callback = function()
+--             vim.api.nvim_ui_send("\027[>40;0q")
+--         end,
+--     })
 
 -------------------------------------------------------------------------------
 -- LSP

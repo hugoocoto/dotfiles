@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kitty sh -c "cat $CESGA_LOGIN | base64 | xargs sudo snx-rs -s secure.cesga.es -u $CESGA_USER -o vpn -p"

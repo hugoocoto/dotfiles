@@ -5,6 +5,7 @@ DIRS=(
     "$HOME/code"
     "$HOME/.config"
     "$HOME/Downloads"
+    "$HOME/uni"
     "$HOME"
 )
 

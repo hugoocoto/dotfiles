@@ -33,6 +33,11 @@ alias gp='git push'
 alias za='zathura --fork'
 alias opencode='EXPERIMENTAL=true opencode'
 
+CESGA_USER="curso1531"
+CESGA_LOGIN=~/.cesga_login 
+alias cesga-vpn="cat $CESGA_LOGIN | base64 | xargs sudo snx-rs -s secure.cesga.es -u $CESGA_USER -o vpn -p"
+alias cesga-ssh='kitty sh -c "TERM=xterm ssh -t $USER@ft3.cesga.es tmux new-session -A -s Home"'
+
 export EDITOR='nvim'
 export LESS='-R --use-color -Dd+r -Du+b'
 export MANPAGER="nvim +Man!"

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=cesga vpn
+
+Exec=sh -c "cesga-vpn"
+NoDisplay=true
+Terminal=false
+Icon=
+Type=Application

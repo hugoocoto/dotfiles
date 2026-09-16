@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kitty sh -c "TERM=xterm ssh -t $USER@ft3.cesga.es tmux new-session -A -s Home"

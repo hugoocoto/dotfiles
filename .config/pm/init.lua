@@ -35,7 +35,7 @@ Packages = {
     -- My tools
     ur.Fetch { user = "hugoocoto", file = "wallpaper/wallpaper.lua" },
     ur.Fetch { user = "hugoocoto", file = "dv/dv.lua" },
-    ur.Fetch { user = "hugoocoto", file = "todo/todo.lua" },
+    ur.Fetch { user = "hugoocoto", file = "tui-do/tui-do.lua" },
     ur.Fetch { user = "hugoocoto", file = "vicel/vicel.lua" },
     ur.Fetch { user = "hugoocoto", file = "fetch/fetch.lua" },
     ur.Fetch { user = "hugoocoto", file = "eqnx/eqnx.lua" },
