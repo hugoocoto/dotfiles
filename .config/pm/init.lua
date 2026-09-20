@@ -31,6 +31,7 @@ Packages = {
 
     ur.Fetch { user = "hugoocoto", file = "nvim-nightly/nvim.lua" },
     ur.Fetch { user = "hugoocoto", file = "helium/helium.lua" },
+    ur.Fetch { user = "hugoocoto", file = "infinipaint/infinipaint.lua" },
 
     -- My tools
     ur.Fetch { user = "hugoocoto", file = "wallpaper/wallpaper.lua" },
@@ -45,4 +46,5 @@ Packages = {
     ur.Fetch { user = "hugoocoto", file = "b/b.lua" },
     ur.Fetch { user = "hugoocoto", file = "tetris/tetris.lua" },
     ur.Fetch { user = "hugoocoto", file = "st/st.lua" },
+    ur.Fetch { user = "hugoocoto", file = "isf/isf.lua" },
 }
