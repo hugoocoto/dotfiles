@@ -33,10 +33,14 @@ alias gp='git push'
 alias za='zathura --fork'
 alias opencode='EXPERIMENTAL=true opencode'
 
-CESGA_USER="curso1531"
-CESGA_LOGIN=~/.cesga_login 
+#
+#   CESGA
+#
+export CESGA_USER="curso1531"
+export CESGA_LOGIN=~/.cesga_login 
 alias cesga-vpn="cat $CESGA_LOGIN | base64 | xargs sudo snx-rs -s secure.cesga.es -u $CESGA_USER -o vpn -p"
-alias cesga-ssh='kitty sh -c "TERM=xterm ssh -t $USER@ft3.cesga.es tmux new-session -A -s Home"'
+# alias cesga-ssh='kitty sh -c "TERM=xterm ssh -t $CESGA_USER@ft3.cesga.es tmux new-session -A -s Home"' # tmux version
+alias cesga-ssh='TERM=xterm ssh -t $CESGA_USER@ft3.cesga.es'
 
 export EDITOR='nvim'
 export LESS='-R --use-color -Dd+r -Du+b'
@@ -56,8 +60,7 @@ function command_not_found_handle() {
 
 function openrepo(){
     url=$(git remote get-url origin 2>/dev/null)
-    if [ -z "$url" ]; then return 1; fi
-    xdg-open "$url"
+    [ -n "$url" ] && xdg-open "$url"
 }
 
 function gc(){

@@ -1,9 +1,5 @@
 [Desktop Entry]
-Version=1.0
 Name=cesga ssh
-
 Exec=sh -c "cesga-ssh"
-NoDisplay=true
-Terminal=false
-Icon=
+Icon=utilities-terminal
 Type=Application
