@@ -4,6 +4,8 @@
 
 vim.g.did_install_default_menus = 1           -- avoid stupid menu.vim (saves ~100ms)
 vim.g.loaded_netrwPlugin = 0                  -- Disable netrw. 🚮 (comment from justinmk)
+vim.g.loaded_python3_provider = 0             -- fuck python
+vim.g.loaded_perl_provider = 0                -- fuck perl
 vim.opt.shortmess:append("I")                 -- Disable start menu
 vim.opt.completeopt = 'menu,menuone,noselect' -- disable built-in completion
 
@@ -24,21 +26,21 @@ vim.o.smartcase = true                        -- smart case when uppercase used
 vim.o.conceallevel = 0                        -- show concealed text plainly
 
 vim.o.colorcolumn = "+0"                      -- highlight at textwidth
-vim.o.textwidth = 80               -- preferred line width
-vim.o.signcolumn = "yes"           -- always show sign column
+vim.o.textwidth = 80                          -- preferred line width
+vim.o.signcolumn = "yes"                      -- always show sign column
 
-vim.o.swapfile = false             -- disable swap files
-vim.o.backup = false               -- disable backup files
-vim.o.undofile = true              -- persistent undo
+vim.o.swapfile = false                        -- disable swap files
+vim.o.backup = false                          -- disable backup files
+vim.o.undofile = true                         -- persistent undo
 
-vim.o.clipboard = "unnamedplus"    -- use system clipboard
-vim.o.ruler = false                -- hide ruler
-vim.o.showcmd = false              -- hide partial command display
-vim.o.showmode = false             -- hide default mode text
-vim.opt.spelllang = { "en", "es" } -- spellcheck languages
+vim.o.clipboard = "unnamedplus"               -- use system clipboard
+vim.o.ruler = false                           -- hide ruler
+vim.o.showcmd = false                         -- hide partial command display
+vim.o.showmode = false                        -- hide default mode text
+vim.opt.spelllang = { "en", "es" }            -- spellcheck languages
 
-vim.o.wrap = true                  -- wrap
-vim.o.linebreak = true             -- "inteligent" wrap
+vim.o.wrap = true                             -- wrap
+vim.o.linebreak = true                        -- "inteligent" wrap
 
 vim.opt.path:append({ "/usr/lib/gcc/**/include", "**" })
 
