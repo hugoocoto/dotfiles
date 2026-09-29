@@ -232,6 +232,20 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(set_background))
 
+-- Toggle screen on/off
+local is_screen_diabled = false
+hl.bind(mainMod .. " + X", function()
+    hl.timer(function()
+        if (is_screen_diabled) then
+            hl.dispatch(hl.dsp.dpms({ action = "enable" }))
+            is_screen_diabled = false
+        else
+            hl.dispatch(hl.dsp.dpms({ action = "disable" }))
+            is_screen_diabled = true
+        end
+    end, { timeout = 500, type = "oneshot" })
+end)
+
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))

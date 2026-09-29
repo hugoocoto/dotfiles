@@ -1,7 +1,6 @@
 [Desktop Entry]
 Version=1.0
 Name=Helium
-
 Exec=helium %U
 StartupNotify=true
 Terminal=false

@@ -41,6 +41,8 @@ export CESGA_LOGIN=~/.cesga_login
 alias cesga-vpn="cat $CESGA_LOGIN | base64 | xargs sudo snx-rs -s secure.cesga.es -u $CESGA_USER -o vpn -p"
 # alias cesga-ssh='kitty sh -c "TERM=xterm ssh -t $CESGA_USER@ft3.cesga.es tmux new-session -A -s Home"' # tmux version
 alias cesga-ssh='TERM=xterm ssh -t $CESGA_USER@ft3.cesga.es'
+alias cesga-isf="cd ~/Documents/tfg && isf . $CESGA_USER@ft3.cesga.es:tfg"
+alias cesga-isf-fsp="cd ~/uni/fsp && isf . $CESGA_USER@ft3.cesga.es:fsp"
 
 export EDITOR='nvim'
 export LESS='-R --use-color -Dd+r -Du+b'
@@ -51,6 +53,8 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/share/pm/bin" # https://github.com/hugoocoto/pm
+export JAVA_HOME=/usr/lib/jvm/default
+export JDTLS_HOME=/usr/share/java/jdtls
 
 PS1='\[\033[30;1m\]\w\[\033[0m\] '
 

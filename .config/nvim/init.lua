@@ -24,21 +24,21 @@ vim.o.smartcase = true                        -- smart case when uppercase used
 vim.o.conceallevel = 0                        -- show concealed text plainly
 
 vim.o.colorcolumn = "+0"                      -- highlight at textwidth
-vim.o.textwidth = 80                          -- preferred line width
-vim.o.signcolumn = "yes"                      -- always show sign column
+vim.o.textwidth = 80               -- preferred line width
+vim.o.signcolumn = "yes"           -- always show sign column
 
-vim.o.swapfile = false                        -- disable swap files
-vim.o.backup = false                          -- disable backup files
-vim.o.undofile = true                         -- persistent undo
+vim.o.swapfile = false             -- disable swap files
+vim.o.backup = false               -- disable backup files
+vim.o.undofile = true              -- persistent undo
 
-vim.o.clipboard = "unnamedplus"               -- use system clipboard
-vim.o.ruler = false                           -- hide ruler
-vim.o.showcmd = false                         -- hide partial command display
-vim.o.showmode = false                        -- hide default mode text
-vim.opt.spelllang = { "en", "es" }            -- spellcheck languages
+vim.o.clipboard = "unnamedplus"    -- use system clipboard
+vim.o.ruler = false                -- hide ruler
+vim.o.showcmd = false              -- hide partial command display
+vim.o.showmode = false             -- hide default mode text
+vim.opt.spelllang = { "en", "es" } -- spellcheck languages
 
-vim.o.wrap = true                             -- wrap
-vim.o.linebreak = true                        -- "inteligent" wrap
+vim.o.wrap = true                  -- wrap
+vim.o.linebreak = true             -- "inteligent" wrap
 
 vim.opt.path:append({ "/usr/lib/gcc/**/include", "**" })
 
