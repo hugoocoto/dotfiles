@@ -69,7 +69,7 @@ vim.keymap.set('n', '<bs>', function()
     vim.diagnostic.config({ virtual_lines = not vim.diagnostic.config().virtual_lines })
 end)
 
-vim.keymap.set('n', '<leader>e', ':Oil .<cr>')
+vim.keymap.set('n', '<leader>e', ':Oil<cr>')
 vim.keymap.set('t', '<Esc>', [[<C-\><C-N>]])
 
 -- Write a typst image func for the last screen capture
