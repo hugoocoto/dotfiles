@@ -16,12 +16,14 @@ hl.monitor({
     mode     = "1920x1080",
     position = "-1920x0",
     scale    = "1",
+    mirror   = "eDP-1",
 })
 hl.monitor({
     output   = "DP-1",
     mode     = "1920x1080",
     position = "-1920x0",
     scale    = "1",
+    mirror   = "eDP-1",
 })
 
 
@@ -32,7 +34,9 @@ hl.monitor({
 local terminal       = "foot tmux new-session -A -s Home"
 local menu           = "zrun"
 local browser        = "xdg-open 'about:blank'" -- kinda cool hack
-local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
+local set_background =
+"swaybg -m fill -i ~/Pictures/Wallpapers/funny-official-mascot-tux-linux-desktop-68v6vjigoyh89456-513704353.jpg"
+-- local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
 -- local menu     = "pkill tofi || tofi-drun"
 
 
@@ -42,7 +46,7 @@ local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
 
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 hl.on("hyprland.start", function()
-    hl.exec_cmd("waybar & hyprpaper")
+    hl.exec_cmd("mybar & hyprpaper")
     hl.exec_cmd(set_background)
 end)
 

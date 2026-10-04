@@ -47,4 +47,5 @@ Packages = {
     ur.Fetch { user = "hugoocoto", file = "tetris/tetris.lua" },
     ur.Fetch { user = "hugoocoto", file = "st/st.lua" },
     ur.Fetch { user = "hugoocoto", file = "isf/isf.lua" },
+    ur.Fetch { user = "hugoocoto", file = "mybar/mybar.lua" },
 }
