@@ -48,4 +48,6 @@ Packages = {
     ur.Fetch { user = "hugoocoto", file = "st/st.lua" },
     ur.Fetch { user = "hugoocoto", file = "isf/isf.lua" },
     ur.Fetch { user = "hugoocoto", file = "mybar/mybar.lua" },
+    ur.Fetch { user = "hugoocoto", file = "send2kodi/send2kodi.lua" },
+    ur.Fetch { user = "hugoocoto", file = "wl2kodi/wl2kodi.lua" },
 }

@@ -16,14 +16,14 @@ hl.monitor({
     mode     = "1920x1080",
     position = "-1920x0",
     scale    = "1",
-    mirror   = "eDP-1",
+    -- mirror   = "eDP-1",
 })
 hl.monitor({
     output   = "DP-1",
     mode     = "1920x1080",
     position = "-1920x0",
     scale    = "1",
-    mirror   = "eDP-1",
+    -- mirror   = "eDP-1",
 })
 
 
@@ -293,11 +293,6 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
     { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
-
--- Requires playerctl
-hl.bind("ALT + j", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("ALT + k", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-hl.bind("ALT + h", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 
 hl.bind("Print",
     hl.dsp.exec_cmd(
