@@ -66,6 +66,7 @@ vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("x", "<leader>e", "y:echo <C-r>\"<cr>gv") -- evaluate expression on the fly
 vim.keymap.set("n", "<leader>c", "1z=")
+vim.keymap.set("n", "<leader>C", "2z=")
 vim.keymap.set('n', '<bs>', function()
     vim.diagnostic.config({ virtual_lines = not vim.diagnostic.config().virtual_lines })
 end)

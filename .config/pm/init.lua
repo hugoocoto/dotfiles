@@ -50,4 +50,6 @@ Packages = {
     ur.Fetch { user = "hugoocoto", file = "mybar/mybar.lua" },
     ur.Fetch { user = "hugoocoto", file = "send2kodi/send2kodi.lua" },
     ur.Fetch { user = "hugoocoto", file = "wl2kodi/wl2kodi.lua" },
+
+    ur.Github { user = "hugoocoto", repo = "zwatch", cmd = ":" },
 }

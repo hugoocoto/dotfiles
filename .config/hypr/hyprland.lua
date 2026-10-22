@@ -34,9 +34,7 @@ hl.monitor({
 local terminal       = "foot tmux new-session -A -s Home"
 local menu           = "zrun"
 local browser        = "xdg-open 'about:blank'" -- kinda cool hack
-local set_background =
-"swaybg -m fill -i ~/Pictures/Wallpapers/funny-official-mascot-tux-linux-desktop-68v6vjigoyh89456-513704353.jpg"
--- local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
+local set_background = "wallpaper -r ~/Pictures/Wallpapers/walls"
 -- local menu     = "pkill tofi || tofi-drun"
 
 

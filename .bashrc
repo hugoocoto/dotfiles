@@ -59,7 +59,7 @@ export JDTLS_HOME=/usr/share/java/jdtls
 PS1='\[\033[30;1m\]\w\[\033[0m\] '
 
 function command_not_found_handle() {
-    echo -e "\e[31m$1??\e[0m"
+    echo -e "\e[31m$(compgen -c | ~/code/lang/a.out $1)\e[0m"
 }
 
 function openrepo(){
