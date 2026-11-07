@@ -307,4 +307,5 @@ vim.lsp.enable({
     'jdtls',
     'zls',
     'rust_analyzer',
+    'terraformls'
 })

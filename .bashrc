@@ -38,7 +38,7 @@ alias opencode='EXPERIMENTAL=true opencode'
 #
 export CESGA_USER="curso1531"
 export CESGA_LOGIN=~/.cesga_login 
-alias cesga-vpn="cat $CESGA_LOGIN | base64 | xargs sudo snx-rs -s secure.cesga.es -u $CESGA_USER -o vpn -p"
+alias cesga-vpn="cat $CESGA_LOGIN | base64 | xargs sudo snx-rs -s secure.cesga.es -u $CESGA_USER -o vpn -e ssl -p"
 # alias cesga-ssh='foot sh -c "TERM=xterm ssh -t $CESGA_USER@ft3.cesga.es tmux new-session -A -s Home"' # tmux version
 alias cesga-ssh='TERM=xterm ssh -t $CESGA_USER@ft3.cesga.es'
 alias cesga-isf="cd ~/Documents/tfg && isf . $CESGA_USER@ft3.cesga.es:tfg"
