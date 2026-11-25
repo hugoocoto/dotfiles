@@ -32,6 +32,7 @@ alias ga='git add .'
 alias gp='git push'
 alias za='zathura --fork'
 alias opencode='EXPERIMENTAL=true opencode'
+alias claude='CLAUDE_CODE_SUBAGENT_MODEL=sonnet claude --model opus --advisor opus'
 
 #
 #   CESGA

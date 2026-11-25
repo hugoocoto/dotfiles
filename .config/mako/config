@@ -1,0 +1,30 @@
+# mako configuration. Reload with: makoctl reload
+# Colors and borders follow hyprland.lua, foot and mybar.
+
+font=Iosevka Nerd Font Propo 13
+background-color=#141617
+text-color=#d4be98
+border-color=#3d4041
+border-size=2
+border-radius=0
+progress-color=over #3d4041
+
+width=400
+height=200
+padding=10,14
+outer-margin=0
+margin=0
+anchor=top-right
+layer=overlay
+max-visible=5
+
+# Hide after 5s unless the app asks for its own timeout (notify-send -t)
+default-timeout=5000
+ignore-timeout=0
+
+[urgency=low]
+text-color=#928374
+
+[urgency=high]
+border-color=#ea6962
+default-timeout=10000
